@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { LoadingContext } from './LoadingContext.js';
+import { LoadingContext } from '../contexts/LoadingContext.js';
 
 function PopupWithForm({ name, title, buttonText, isOpen, onClose, onSubmit, isValid = true, children }) {
     const isLoading = useContext(LoadingContext);

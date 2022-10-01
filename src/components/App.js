@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { CurrentUserContext } from './CurrentUserContext.js';
-import { LoadingContext } from './LoadingContext.js';
+import { CurrentUserContext } from '../contexts/CurrentUserContext.js';
+import { LoadingContext } from '../contexts/LoadingContext.js';
 import Header from './Header.js';
 import Main from './Main.js';
 import Footer from './Footer.js';
