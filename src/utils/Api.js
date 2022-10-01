@@ -36,7 +36,7 @@ class Api {
             },
             body: JSON.stringify({
                 name: data.name,
-                about: data.info
+                about: data.description
             })
         })
             .then(res => this._checkResponse(res));
@@ -81,9 +81,9 @@ class Api {
             .then(res => this._checkResponse(res));
     }
 
-    handleLike = (cardId, method) => {
+    handleLike = (cardId, isLiked) => {
         return fetch(`${this._baseUrl}/${this._cohort}/cards/${cardId}/likes`, {
-            method: method,
+            method: isLiked ? 'DELETE' : 'PUT',
             headers: {
                 authorization: this._token,
             },
