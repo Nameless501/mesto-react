@@ -16,7 +16,7 @@ function PopupWithForm({ name, title, buttonText, isOpen, onClose, onSubmit, isV
                         {isLoading ? 'Сохранение...' : buttonText}
                     </button>
                 </fieldset>
-              <button type="reset" className="popup__close-button" onClick={onClose} />
+                <button type="reset" className="popup__close-button" onClick={onClose} />
             </form>
         </section>
     );

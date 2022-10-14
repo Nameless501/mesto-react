@@ -12,12 +12,12 @@ function Card({ card, onCardClick, onCardLike, onCardDelete }) {
     }
 
     function handleLike() {
-       onCardLike(card, isLiked);
+        onCardLike(card, isLiked);
     }
 
     function handleDeleteClick() {
         onCardDelete(card);
-     }
+    }
 
     return(
         <li className='elements__card'>

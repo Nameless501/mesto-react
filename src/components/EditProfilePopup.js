@@ -85,16 +85,16 @@ function EditProfilePopup({ isOpen, onClose, onUpdateUser }) {
 
     return(
         <PopupWithForm name="profile" title="Редактировать профиль" buttonText="Сохранить" isOpen={isOpen} onClose={onClose} onSubmit={handleSubmit} isValid={formIsValid} >
-          <>
-            <input type="text" name="name" id="name-input" className="popup__input popup__input_type_name" required minLength="2" maxLength="40" onChange={handleNameChange} value={name.value || ''} />
-            <span className={`popup__error-message ${(!name.isValid && isOpen) ? "popup__error-message_visible" : "popup__error-message_hidden"}`} >
-                {name.validationMsg}
-            </span>
-            <input type="text" name="info" id="job-input" className="popup__input popup__input_type_job" required minLength="2" maxLength="200" onChange={handleDescriptionChange} value={description.value || ''} />
-            <span className={`popup__error-message ${(!description.isValid && isOpen) ? "popup__error-message_visible" : "popup__error-message_hidden"}`} >
-                {description.validationMsg}
-            </span>
-          </>
+            <>
+                <input type="text" name="name" id="name-input" className="popup__input popup__input_type_name" required minLength="2" maxLength="40" onChange={handleNameChange} value={name.value || ''} />
+                <span className={`popup__error-message ${(!name.isValid && isOpen) ? "popup__error-message_visible" : "popup__error-message_hidden"}`} >
+                    {name.validationMsg}
+                </span>
+                <input type="text" name="info" id="job-input" className="popup__input popup__input_type_job" required minLength="2" maxLength="200" onChange={handleDescriptionChange} value={description.value || ''} />
+                <span className={`popup__error-message ${(!description.isValid && isOpen) ? "popup__error-message_visible" : "popup__error-message_hidden"}`} >
+                    {description.validationMsg}
+                </span>
+            </>
         </PopupWithForm>
     )
 }
